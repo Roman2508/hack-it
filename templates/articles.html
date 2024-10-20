@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <section class="articles">
+        <h1>Discover something new</h1>
+    </section>
+
+    <h2 style="text-align:center">Open new City</h2>
+    
+    {% for article in articles %}
+        <div class="container">
+            <div class="post-img"> <img src="{{ article.image }}" /> </div>
+
+            <div class="details">
+                <h3 class="post-title">{{ article.title }}</h3>
+                <p class="post-continent">{{ article.continent }}</p>
+                <p class="post-text">{{ article.text }}</p>
+
+                <div class="more-details"> <a href="/details/{{ article.id }}">More details</a> </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

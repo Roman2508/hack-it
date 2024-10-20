@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.about {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-indent: 30px;
+  line-height: 40px;
+  text-align: justify;
+  margin: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.menu {
+  background-color: black;
+  display: flex;
+}
+
+.menu li {
+  padding: 10px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  height: 600px;
+  background-image: url(../images/aleksandr.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+.articles {
+  height: 600px;
+  background-image: url(../images/tunel.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  padding-top: 150px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.logo p {
+  padding-top: 100px;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+form {
+  margin: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+input {
+  width: 400px;
+  font-size: 20px;
+}
+
+option {
+  font-size: 20px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.interesting-places {
+  display: flex;
+  gap: 40px;
+  padding: 50px 40px 100px;
+}
+
+.link {
+  color: white;
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.place img {
+  max-width: 100%;
+}
+
+.place h3 {
+  padding: 20px 0;
+}
+
+/* acticles */
+
+.container {
+  border: 3px solid #9fa59d;
+  margin: 30px 100px;
+  padding: 10px;
+  display: flex;
+}
+
+.post-img {
+  width: 270px;
+  min-width: 270px;
+  overflow: hidden;
+}
+
+.post-img img {
+  height: 390px;
+}
+
+.details {
+  max-width: 850px;
+  padding: 20px;
+}
+
+.post-text {
+  font-size: 15px;
+  text-align: justify;
+  text-indent: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.post-title {
+  color: #c4ffe9;
+}
+
+.post-continent {
+  color: #9fa59d;
+  font-size: 15px;
+  margin: 30px 0;
+}
+
+/* full post */
+.full-post {
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.full-post-img {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.full-post-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.full-post-text {
+  font-size: 25px;
+  text-align: justify;
+  text-indent: 15px;
+}
+
+.full-post-details {
+  border: 3px solid #9fa5ed;
+  margin: 30px 100px;
+  padding: 20px;
+}
+
+.article-not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.more-details {
+  border: 3px solid #c4ffe9;
+  width: 300px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.more-details a {
+  color: #c4ffe9;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 840px) {
+  .post-img {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .post-img img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-img {
+    width: 350px;
+    min-width: 350px;
+  }
+
+  .details {
+    text-align: center;
+  }
+
+  .more-details {
+    margin: 20px auto 0;
+  }
+}
