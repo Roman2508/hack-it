@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Login to Admin account{% endblock %}
+
+{% block main %}
+  <form class="login-form" action="/admin" method="post">
+    <h2>Login to Admin account</h2>
+    <input placeholder="Your login" name="login" />
+    <input placeholder="Your password" name="password" />
+    <p style="color: red">{{ message }}</p>
+    <button type="submit">LOG IN</button>
+  </form>
+{% endblock %}

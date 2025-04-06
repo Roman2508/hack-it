@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-color: black;
+  flex: 1;
+}
+
+.about {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-indent: 30px;
+  line-height: 40px;
+  text-align: justify;
+  margin: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.menu {
+  padding: 20px;
+  background-color: black;
+  display: flex;
+}
+
+.menu li {
+  padding: 10px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.menu li:last-child {
+  margin-left: auto;
+}
+
+.logo {
+  height: calc(100vh - 80px);
+  background-image: url(aleksandr.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 70px;
+  padding-top: 150px;
+}
+
+.logo p {
+  padding-top: 100px;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+.login-form,
+.add-article-form {
+  margin: 50px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.login-form input {
+  max-width: 300px;
+  padding: 5px 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+}
+
+.add-article-form label {
+  color: white;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.add-article-form {
+  gap: 0;
+}
+
+.add-article-form input,
+.add-article-form select {
+  width: 300px;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.add-article-form textarea {
+  font-size: 20px;
+}
+
+.login-form button,
+.add-article-form button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin: 15px;
+  padding: 10px;
+}
+
+/* discover page */
+
+.discover {
+  height: 100vh;
+  background-image: url(./tunel.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .logo p {
+    font-size: 24px;
+  }
+
+  .menu a {
+    font-size: 18px;
+  }
+
+  .about {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .logo p {
+    font-size: 20px;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  .about {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

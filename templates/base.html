@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <!-- початок html сторінки -->
+  <head>
+    <!-- Тут важлива інформація для відображення html сторінки -->
+    <title>{% block title %} {% endblock %}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">MAIN</a></li>
+          <li><a href="/Explore">INTERESTING PLACES</a></li>
+          <li><a href="login.html">LOG IN</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>{% block main %} {% endblock %}</main>
+
+    <footer>
+      <p>
+        Copyright © 1999-2020 Ctrip.com (Hong Kong) Limited. All rights reserved.<br />
+        Site Operator: Ctrip.com (Hong Kong) Limited<br />
+        Hong Kong Travel License No. 352367
+      </p>
+    </footer>
+  </body>
+</html>

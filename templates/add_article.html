@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block main %}
+      <form class="add-article-form" name="add_article" action="#" method="post">
+        <h2>Add a new Article</h2>
+        <label for="title">Article title</label>
+        <input id="title" />
+
+        <label for="text">Article text</label>
+        <textarea name="text" rows="8" cols="80" required></textarea>
+
+        <label for="url">Image URL</label>
+        <input id="url" type="url" />
+
+        <label for="continent">Continent</label>
+        <select id="continent">
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Australia">Australia</option>
+        </select>
+
+        <div>
+          <button type="submit">ADD ARTICLE</button>
+          <button type="reset">RESET</button>
+        </div>
+      </form>
+{% endblock %}

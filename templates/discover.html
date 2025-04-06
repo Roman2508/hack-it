@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Discover something new{% endblock %}
+
+{% block main %}
+    <div class="discover">
+        <h1>Discover something new</h1>
+    </div>
+    <div>
+        <h2>Open new city</h2>
+        {% for article in articles %}
+            <a href="/discover/{{article}}">
+                <h4>{{ article }}</h4>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
+
