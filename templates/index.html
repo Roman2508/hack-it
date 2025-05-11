@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PhotoKeeper</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="main-menu-container">
+        <div class="menu-trigger">
+          <div class="menu-trigger-lines"></div>
+        </div>
+
+        <nav class="main-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-content-container">
+        <h1>PhotoKeeper</h1>
+        <div>
+          <label>
+            <input type="file" name="file" id="input-file" class="hidden" />
+            <img class="upload-button camera-button" src="../static/img/camera.png" />
+          </label>
+        </div>
+        <p class="header-comment">Find something special</p>
+      </div>
+    </header>
+
+    <div class="upload-image-overlay hidden">
+      <form action="" method="">
+        <div class="upload-image-container">
+          <img class="upload-image" src="" />
+        </div>
+
+        <div class="effect-input-range-container">
+          <input type="range" id="effect-input-range" class="hidden" />
+          <label for="effect-input-range">
+            <div class="effect-level-line">
+              <div class="effect-level-progress-line"></div>
+              <div class="effect-level-pin">
+                <div class="effect-level-tooltip hidden">0%</div>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <fieldset class="upload-effect-filedset">
+          <input type="radio" name="effect" id="none" class="hidden" value="none" checked />
+          <label for="none" class="upload-effect-label input-active">
+            <div class="upload-effect-preview"></div>
+          </label>
+
+          <input type="radio" name="effect" id="grayscale" class="hidden" value="grayscale" />
+          <label for="grayscale" class="upload-effect-label">
+            <div class="upload-effect-preview grayscale"></div>
+          </label>
+
+          <input type="radio" name="effect" id="sepia" class="hidden" value="sepia" />
+          <label for="sepia" class="upload-effect-label">
+            <div class="upload-effect-preview sepia"></div>
+          </label>
+
+          <input type="radio" name="effect" id="invert" class="hidden" value="invert" />
+          <label for="invert" class="upload-effect-label">
+            <div class="upload-effect-preview invert"></div>
+          </label>
+
+          <input type="radio" name="effect" id="saturate" class="hidden" value="saturate" />
+          <label for="saturate" class="upload-effect-label">
+            <div class="upload-effect-preview saturate"></div>
+          </label>
+
+          <input type="radio" name="effect" id="contrast" class="hidden" value="contrast" />
+          <label for="contrast" class="upload-effect-label">
+            <div class="upload-effect-preview contrast"></div>
+          </label>
+        </fieldset>
+
+        <div>
+          <input placeholder="#хеш-тег" class="upload-form-hach-tag" />
+          <textarea placeholder="Ваш коментар..." class="upload-form-comment"></textarea>
+        </div>
+
+        <p class="form-error-message"></p>
+
+        <div class="form-buttons">
+          <button class="upload-button-form active" type="reset" id="cancel-upload">ВІДМІНА</button>
+          <button class="upload-button-form active" type="submit" id="submit-upload">ЗАВАНТАЖИТИ</button>
+        </div>
+      </form>
+    </div>
+
+    <main class="container">
+      <div class="pictures-container"></div>
+
+      <div class="opened-picture-background hidden">
+        <div class="opened-picture-container">
+          <img class="close-button" src="../static/img/close.png" />
+          <div class="opened-picture">
+            <img class="opened-picture-img" src="../static/img/photos/0.jpg" alt="photo" />
+            <div class="opened-picture-description">
+              <h4 class="description-text"></h4>
+              <div class="picture-status">
+                <img src="../static/img/comment.png" alt="comment icon" />
+                <span class="picture-comments"></span>
+                <img src="../static/img/heart.png" alt="like icon" />
+                <span class="picture-start"></span>
+              </div>
+            </div>
+
+            <div class="picture-comments-container"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      <p>PhotoKeeper 2025</p>
+      <p>tel: 0-800-907-44</p>
+      <p>e-mail: info@photokeeper.com</p>
+    </footer>
+
+    <template id="picture-template">
+      <div class="picture-example">
+        <img class="picture-img" src="../static/img/photos/0.jpg" alt="photo" />
+        <div class="picture-description">
+          <img class="picture-comment" src="../static/img/comment.png" alt="comment icon" />
+          <span class="picture-comment-span">5</span>
+          <img class="picture-like" src="../static/img/heart.png" alt="like icon" />
+          <span class="picture-like-span">12</span>
+        </div>
+      </div>
+    </template>
+
+    <template id="picture-comment">
+      <div class="comment-block">
+        <p class="comment-text"></p>
+        <p class="comment-author">Anonym</p>
+      </div>
+    </template>
+
+    <script src="../static/index.js"></script>
+  </body>
+</html>
